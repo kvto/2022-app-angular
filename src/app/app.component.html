@@ -1,5 +1,6 @@
 <app-header></app-header>
 
 <div class="grid">
-<app-card *ngFor="let card of cards"></app-card>
+<app-card [dataEntrance]="detalleVideo"
+*ngFor="let detalleVideo of listdeVideos"></app-card>
 </div>
