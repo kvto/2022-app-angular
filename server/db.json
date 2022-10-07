@@ -61,7 +61,12 @@
       }
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "text": "este es el comentario",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "email": "leifer33@gmail.com",
