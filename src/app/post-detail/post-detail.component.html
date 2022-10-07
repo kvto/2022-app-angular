@@ -13,16 +13,16 @@
     <div class="block-two">
         <div>
             <ul class="comment-list">
-                <!-- <li *ngFor="let detalleComentario of comentarios"> -->
+                <li *ngFor="let detalleComentario of comentarios">
                     <div class="author">
                     
                         <img class="avatar" src="https://avatars3.githubusercontent.com/u/15802366?s=460&u=59125ba37dfb5f0e87ee5f8c83280c88129a8881&v=4" alt="">
                         
                     </div>
                     <div class="content">
-                       <!-- <b><div>Leifer</div></b> {{detalleComentario?.text}} -->
+                       <b><div>Leifer</div></b> {{detalleComentario?.text}}
                     </div>
-                <!-- </li> -->
+                </li>
             </ul>
             <div>
                 <form [formGroup]="form" (submit)="enviarData()">

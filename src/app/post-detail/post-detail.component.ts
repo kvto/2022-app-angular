@@ -10,6 +10,7 @@ import { RestService } from '../rest.service';
 })
 export class PostDetailComponent implements OnInit {
   public respuesta:any = [];
+  public comentarios:any = [];
   public form!: FormGroup;
   constructor(private route:ActivatedRoute, private RestService:RestService,
     private formBuilder: FormBuilder) { }
@@ -17,7 +18,8 @@ export class PostDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap:any) =>{
      const {params} = paramMap
-     this.cargarData(params.variable)
+     this.cargarData(params.variable);
+     this.cargarComentarios();
     }
      )
     this.form = this.formBuilder.group({
@@ -33,13 +35,23 @@ export class PostDetailComponent implements OnInit {
     })
   }
 
+  cargarComentarios(){
+    this.RestService.get(`http://localhost:3000/comments`)
+      .subscribe(respuesta => {
+          this.comentarios = respuesta;
+      } )
+  }
+
+
   public enviarData(){
     this.RestService.post(`http://localhost:3000/comments`,
     {
-      text: 'este es el comentario'
+      text:this.form.value.textAreaComentario
     })
     .subscribe(respuesta =>{
-      console.log('Comentario creado!!!!')
+      console.log('Comentario creado!!!!');
+      this.form.reset();
+      this.cargarComentarios();
     })
   }
 }

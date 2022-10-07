@@ -9,6 +9,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListViewsComponent } from './list-views/list-views.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     PostDetailComponent,
     HomeComponent,
+    ListViewsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgxDatatableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
