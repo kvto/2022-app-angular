@@ -8,24 +8,47 @@ import { RestService } from './../rest.service';
   styleUrls: ['./list-views.component.css']
 })
 export class ListViewsComponent {
-  
-  @ViewChild('editTmpl', { static: true }) editTmpl!:TemplateRef<any>;
+
+  @ViewChild('imageTmpl', { static: true }) imageTmpl!: TemplateRef<any>;
+  @ViewChild('titleTmpl', { static: true }) titleTmpl!:TemplateRef<any>;
+  @ViewChild('viewTmpl', { static: true }) viewTmpl!: TemplateRef<any>;
   @ViewChild('hdrTpl', { static: true }) hdrTpl!:TemplateRef<any>;
 
-  rows = [];
-  columns = [];
+  data:any = [];
+  cols:any = [];
 
   ColumnMode = ColumnMode;
 
   constructor(private RestService: RestService) { }
 
   ngOnInit(): void {
-    this.columns = [
-      
+    this.cols = [
+      {
         cellTemplate: this.imageTmpl,
-
-      
+        headerTemplate: this.hdrTpl,
+        name: 'image',
+        maxWidth:180
+      },
+      {
+        cellTemplate: this.titleTmpl,
+        headerTemplate: this.hdrTpl,
+        name: 'title'
+      },
+      {
+        cellTemplate: this.viewTmpl,
+        headerTemplate: this.hdrTpl,
+        name: 'views'
+      }
     ];
+
+    this.cargarData()
+  }
+
+  cargarData(): void {
+    this.RestService.get(`http://localhost:3000/posts`)
+    .subscribe((data:any) => {
+      this.data = data
+    })
   }
 
 }

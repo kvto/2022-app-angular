@@ -1,29 +1,38 @@
 <app-header></app-header>>
-<div>
-    <h3>
-      TemplateRef via Column Property
-      <small>
-        <a
-          href="https://github.com/swimlane/ngx-datatable/blob/master/src/app/templates/template-obj.component.ts"
-          target="_blank"
-        >
-          Source
-        </a>
-      </small>
-    </h3>
-    <ngx-datatable
-      class="material"
-      [rows]="rows"
-      [columns]="columns"
-      [columnMode]="ColumnMode.force"
-      [headerHeight]="50"
-      [footerHeight]="50"
-      rowHeight="auto"
-    >
-    </ngx-datatable>
-    <ng-template #hdrTpl let-column="column"> <strong>Fancy</strong>: {{ column.name }} !! </ng-template>
-    <ng-template #editTmpl let-row="row" let-value="value">
-      <img *ngIf="value === 'male'" width="150" src="https://media.giphy.com/media/I8nepxWwlEuqI/giphy.gif" />
-      <img *ngIf="value === 'female'" width="150" src="https://media.giphy.com/media/sxSVG3XHf7yww/giphy.gif" />
-    </ng-template>
-  </div>
+<div class="">
+  <h3 class="table">
+    Live Data Demo
+  
+
+  </h3>
+  <ngx-datatable
+  class="material"
+  [rows]="data"
+  [columns]="cols"
+  [columnMode]="ColumnMode.force"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  rowHeight="auto"
+>
+</ngx-datatable>
+
+  <ng-template #hdrTpl let-column="column">{{ column.name }}</ng-template>
+
+  <ng-template #imageTmpl let-row="row" let-column="column" let-value="value">
+      <img appImagenRota class="video-image" [src]="value"  />
+  </ng-template>
+
+  <ng-template #titleTmpl let-row="row" let-column="column" let-value="value">
+      <div [routerLink]="['/','post',row?.id]">
+          <div class="title">{{row?.title}}</div>
+          <div class="subtitle">{{row?.subtitle}}</div>
+      </div>
+  </ng-template>
+
+  <ng-template #viewTmpl let-row="row" let-column="column" let-value="value">
+      <div>
+          <div class="">{{value}}</div>
+      </div>
+  </ng-template>
+
+</div>

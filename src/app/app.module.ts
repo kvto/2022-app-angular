@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListViewsComponent } from './list-views/list-views.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
     PostDetailComponent,
     HomeComponent,
     ListViewsComponent,
+    LoginComponent,
     
   ],
   imports: [
