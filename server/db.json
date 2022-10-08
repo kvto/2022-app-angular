@@ -92,6 +92,16 @@
       "email": "leifer33@gmail.com",
       "password": "$2a$10$Uc6Nmjt82gxlAt0umMtxpug2X.OapxZqEesH8leydtkkfKyX8bvq6",
       "id": 1
+    },
+    {
+      "email": "leifer33@gmail.com",
+      "password": "dddd",
+      "id": 2
+    },
+    {
+      "email": "kjmz.15987@gmail.com",
+      "password": "Undertaker913!",
+      "id": 3
     }
   ],
   "files": []

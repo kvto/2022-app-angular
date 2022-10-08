@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="wrapper">
-    <form class="form" [formGroup]="form" (submit)="enviarDatos()">
+    <form class="form" [formGroup]="form" (submit)="enviarDatos()" errorTailor>
         <div class="w-100 pb-2">
             <h2>Iniciar sesion</h2>
         </div>
@@ -17,3 +17,10 @@
        </div>
     </form>
 </div>
+
+<ng-template let-error let-text="text" #messagePasswordError>
+    <b>Error:</b>
+    <div *ngIf="error?.minlength">
+        <i> No cumples con los caracteres minimos</i>
+    </div>
+</ng-template>

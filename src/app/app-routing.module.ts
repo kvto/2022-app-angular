@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ListViewsComponent } from './list-views/list-views.component';
 import { LoginComponent } from './login/login.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { VigilanteGuard } from './vigilante.guard';
 
 const routes: Routes = [
     {
@@ -16,11 +17,12 @@ const routes: Routes = [
     },
     {
         path:'list-videos',
-        component:ListViewsComponent
+        component:ListViewsComponent,
+        canActivate: [VigilanteGuard]
     },
     {
         path: 'login',
-        component:LoginComponent
+        component:LoginComponent,
       }
 ];
 

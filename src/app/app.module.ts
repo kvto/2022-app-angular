@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListViewsComponent } from './list-views/list-views.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { LoginComponent } from './login/login.component';
+import { ErrorTailorModule } from '@ngneat/error-tailor';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -23,8 +25,7 @@ import { LoginComponent } from './login/login.component';
     PostDetailComponent,
     HomeComponent,
     ListViewsComponent,
-    LoginComponent,
-    
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +34,18 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     NgxDatatableModule,
+    ErrorTailorModule.forRoot({
+      errors: {
+        useValue: {
+          required: 'This field is required',
+          minlength: ({ requiredLength, actualLength }) => 
+                      `Expect ${requiredLength} but got ${actualLength}`,
+          invalidAddress: error => `Address isn't valid`
+        }
+      }
+    })
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

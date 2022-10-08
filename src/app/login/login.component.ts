@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   enviarDatos(): any {
-    this.RestService.post(`http://localhost:3000/login`,
+    this.RestService.post(`http://localhost:3000/users`,
       this.form.value)
       .subscribe((res: any) => {
         console.log('Login Exitoso!!');
