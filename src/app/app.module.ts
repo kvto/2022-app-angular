@@ -14,6 +14,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { LoginComponent } from './login/login.component';
 import { ErrorTailorModule } from '@ngneat/error-tailor';
 import { CookieService } from 'ngx-cookie-service';
+import { MostrarMilesPipe } from './mostrar-miles.pipe';
+import { UploadPageComponent } from './upload-page/upload-page.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { CookieService } from 'ngx-cookie-service';
     PostDetailComponent,
     HomeComponent,
     ListViewsComponent,
-    LoginComponent
+    LoginComponent,
+    MostrarMilesPipe,
+    UploadPageComponent
   ],
   imports: [
     BrowserModule,
