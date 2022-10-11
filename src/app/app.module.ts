@@ -16,6 +16,7 @@ import { ErrorTailorModule } from '@ngneat/error-tailor';
 import { CookieService } from 'ngx-cookie-service';
 import { MostrarMilesPipe } from './mostrar-miles.pipe';
 import { UploadPageComponent } from './upload-page/upload-page.component';
+import { ImagenRotaDirective } from './imagen-rota.directive';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { UploadPageComponent } from './upload-page/upload-page.component';
     ListViewsComponent,
     LoginComponent,
     MostrarMilesPipe,
-    UploadPageComponent
+    UploadPageComponent,
+    ImagenRotaDirective
   ],
   imports: [
     BrowserModule,

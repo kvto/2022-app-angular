@@ -1,4 +1,21 @@
-<app-header></app-header>>
-<div>
-    <input (change)="capturarfile($event)" type=""file>
+<app-header></app-header>
+<div class="wrapper">
+    <div class="position-relative">
+        <h3>Subir imagen</h3>
+        <input class="input-file" (change)="capturarFile($event)" type="file">
+        <div class="preview-img" *ngIf="previsualizacion">
+            <button class="clear-image" type="button" (click)="clearImage()">Clear</button>
+            <img  [src]="previsualizacion" alt="">
+        </div>
+      
+        <div class="p-1">
+            <small>Se aceptan archivos imágenes de tipo .png</small>
+            <div class="wrapper-button" *ngIf="previsualizacion">
+                <button type="button" class="button" [disabled]="loading" (click)="subirArchivo()">
+                    {{(loading) ? 'Cargando.....' : 'Subir Archivo'}}
+                </button>
+            </div>
+  
+    </div>
+   
 </div>
