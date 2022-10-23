@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="">
+<div class="font">
   <h3 class="table">
     Live Data Demo
   
@@ -16,7 +16,7 @@
 >
 </ngx-datatable>
 
-  <ng-template #hdrTpl let-column="column">{{ column.name }}</ng-template>
+  <ng-template class="column" #hdrTpl let-column="column">{{ column.name }}</ng-template>
 
   <ng-template #imageTmpl let-row="row" let-column="column" let-value="value">
       <img appImagenRota class="video-image" [src]="value"  />

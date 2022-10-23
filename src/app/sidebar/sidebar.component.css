@@ -1,7 +1,7 @@
 :host{
     padding-left: .5rem;
     padding-right: .5rem;
-    display: block
+    display: block;
 }
 .title{
     font-weight: 600;
@@ -29,4 +29,8 @@
 }
 .title-inside{
     font-weight: 600;
+}
+
+.font{
+    background-color:#d0a9d2
 }

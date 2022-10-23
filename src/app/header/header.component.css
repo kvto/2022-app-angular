@@ -5,6 +5,7 @@
     display: flex;
     padding: 0.75rem;
     justify-content: space-between;
+    background-color:#d0a9d2
 }
 .menu{
     margin: 0;
