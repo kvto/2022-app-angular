@@ -23,7 +23,7 @@ Once having both steps perfectly, we proceed to execute the environments
 
     * - You need to run both the front-end and the back-end so you have to run it through two separate environments.
 
-<p>
+<p align="center">
 <img height="200" width="500"src="src/app/img/6.png" />
 <img height="300" width="500" src="src/app/img/7.png" />
 <img height="150" width="500" src="src/app/img/8.png" />   
