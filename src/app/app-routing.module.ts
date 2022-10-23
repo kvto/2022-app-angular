@@ -13,7 +13,7 @@ const routes: Routes = [
         component:HomeComponent
     },
     {
-        path:'posts/:variable',
+        path:'post/:variable',
         component:PostDetailComponent
     },
     {

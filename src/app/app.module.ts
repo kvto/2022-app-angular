@@ -17,6 +17,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { MostrarMilesPipe } from './mostrar-miles.pipe';
 import { UploadPageComponent } from './upload-page/upload-page.component';
 import { ImagenRotaDirective } from './imagen-rota.directive';
+import { OnlySessionDirective } from './only-session.directive';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ImagenRotaDirective } from './imagen-rota.directive';
     LoginComponent,
     MostrarMilesPipe,
     UploadPageComponent,
-    ImagenRotaDirective
+    ImagenRotaDirective,
+    OnlySessionDirective
   ],
   imports: [
     BrowserModule,

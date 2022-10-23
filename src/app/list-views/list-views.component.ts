@@ -45,7 +45,7 @@ export class ListViewsComponent {
   }
 
   cargarData(): void {
-    this.RestService.get(`http://localhost:3000/posts`)
+    this.RestService.get(`http://localhost:3000/post`)
     .subscribe((data:any) => {
       this.data = data
     })

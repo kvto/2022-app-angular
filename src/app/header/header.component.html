@@ -1,11 +1,17 @@
 <div class="header">
-    <ul class="menu">
-        <li>Link1</li>
-        <li>Link1</li>
-        <li>Link1</li>
-        <li>Link1</li>
-        <li>Link1</li>
-        <li>Link1</li>
-    </ul>
+    <div class="logo-header" [routerLink]="['/']">
+        <img class="logo" src="https://portfoliokjmz.netlify.app/static/media/logo3.c3933b9b696262cf9f61.png" alt="">
+         
+    </div>
+    <div class="menu-header">
+        <ul class="menu">
+       
+            <li *appOnlySession="true" [routerLink]="['/','list-videos']">Mis videos</li>
+            <li>Más vistos</li>
+            <li *appOnlySession="true" [routerLink]="['/','upload']">Subir video</li>
+            <li *appOnlySession="false" [routerLink]="['/','login']">Iniciar sesion</li>
+          
+        </ul>
+    </div>
 
 </div>

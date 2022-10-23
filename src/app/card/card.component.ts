@@ -17,9 +17,9 @@ export class CardComponent implements OnInit {
     // console.log("entrando data:"+this.dataEntrance)
   }
 agregarFavorito(){
-  // console.log(this.dataEntrance)
-this.servicioFavorito.disparadorDeFavoritos.emit({
-  data:this.dataEntrance
-});
+ console.log('agregando favoritoooo'+this.dataEntrance)
+ this.servicioFavorito.disparadorDeFavoritos.emit({
+   data:this.dataEntrance
+ });
 }
 }

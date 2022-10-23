@@ -29,7 +29,7 @@ export class PostDetailComponent implements OnInit {
     }
       
   cargarData(id:string){
-    this.RestService.get(`http://localhost:3000/posts/${id}`)
+    this.RestService.get(`http://localhost:3000/post/${id}`)
     .subscribe( respuesta =>{
       this.respuesta = respuesta;
     })

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   public cargarData(){
-    this.RestService.get(`http://localhost:3000/posts`)
+    this.RestService.get(`http://localhost:3000/post`)
     .subscribe(respuesta => {
       this.listdeVideos = respuesta;
     })
