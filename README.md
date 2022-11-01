@@ -10,7 +10,7 @@ it has a login page, as well as sections of favorite videos, detailed videos and
   <img height=200" src="src/app/img/4.png" />
 </p>
                                           
-1.- Once the project is downloaded, Once the project is downloaded, access the terminal of your console.
+1.- Once the project is downloaded, access the terminal of your console.
 
     * - To access open the terminal (Control + Ñ) or (Terminal - New Terminal).
     * - Run the command "npm install"
@@ -19,7 +19,7 @@ it has a login page, as well as sections of favorite videos, detailed videos and
   <img height="200" src="src/app/img/5.png" />
 </p>
                                            
-Once having both steps perfectly, we proceed to execute the environments
+Once having the first step perfectly, we proceed to execute the environments
 
     * - You need to run both the front-end and the back-end so you have to run it through two separate environments.
 
