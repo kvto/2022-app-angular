@@ -26,8 +26,8 @@ Once having the first step perfectly, we proceed to execute the environments
 <p align="center">
 <img height="200" src="src/app/img/6.png" />
 <img height="300" width="500" src="src/app/img/7.png" />
-<img height="150" width="500" src="src/app/img/8.png" />   
-<img height="300" src="src/app/img/9.png" />  
+<img height="150" src="src/app/img/8.png" />   
+<img height="300" width="500" src="src/app/img/9.png" />  
 </p>
                                     
 ## More info about me: 
