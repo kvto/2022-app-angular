@@ -24,10 +24,10 @@ Once having the first step perfectly, we proceed to execute the environments
     * - You need to run both the front-end and the back-end so you have to run it through two separate environments.
 
 <p align="center">
-<img height="200" width="500"src="src/app/img/6.png" />
+<img height="200" src="src/app/img/6.png" />
 <img height="300" width="500" src="src/app/img/7.png" />
 <img height="150" width="500" src="src/app/img/8.png" />   
-<img height="300" width="500" src="src/app/img/9.png" />  
+<img height="300" src="src/app/img/9.png" />  
 </p>
                                     
 ## More info about me: 
